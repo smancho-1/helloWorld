@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Sarah Mancho</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow">
+    <style>
+        /* Incorporated CSS to my about page by styling the paragraphs, headings, and table. */
+        p{
+            font-family: "Barlow", sans-serif;
+            color:#7B68EE;
+            font-size:18px;
+        }
+        h2{
+            font-family: "Barlow", sans-serif;
+            color: mediumblue;
+            background-color: ghostwhite;
+            font-weight:bold;
+        }
+        table, td, th {
+            font-family:"Barlow", sans-serif ;
+            border-style: solid;
+            border-width: 2px;
+            border-color: black;
+            border-collapse: collapse;
+        }
+        /* Used Selective CSS Selectors to alter aspects of the page that should stand out from the rest of the page. */
+        #sparagraph{
+            font-style: italic;
+            font-family:"Karla",sans-serif;
+            color: maroon;
+            font-size: 16px
+        }
+        .lists-alter{
+            font-family:"Barlow",sans-serif;
+            font-size: 18px;
+            color: mediumorchid;
+        }
+        img.logo{
+            height: 72px;
+            width: 267px;
+        }
+    </style>
+    <link href="/static/css/style.css" rel = "stylesheet">
+</head>
+<body>
+<h1>About Me</h1>
+
+<h2>Education</h2>
+<p><strong>University</strong>: <em>University of Maryland College Park</em> (2021-2024)</p>
+<table>
+    <tr>
+        <th>Course Name</th>
+        <th>Semester Taken</th>
+    </tr>
+    <tr>
+        <td>BMGT 302</td>
+        <td>Fall 2022</td>
+    </tr>
+    <tr>
+        <td>BMGT 402</td>
+        <td>Fall 2023</td>
+    </tr>
+    <tr>
+        <td>BMGT 407</td>
+        <td>Spring 2024</td>
+    </tr>
+</table>
+<!-- This a table of the few courses taken at my university.-->
+<p><strong>High School</strong>: <em>Academy of Health Sciences @ Prince George's Community College</em> (2017-2021)</p>
+
+<h2>Hometown</h2>
+<p> I have never lived in one home for more than 5 years, but lived in Laurel, MD during my formal years of life.
+    These are all the cities, I've ever lived in: </p>
+
+<ol class="lists-alter">
+    <li>Hyattsville, MD</li>
+    <li>Adelphi, MD</li>
+    <li>Beltsville, MD</li>
+    <li>Laurel, MD</li>
+    <li>Glen Burnie, MD</li>
+</ol>
+<!-- This an alphabetical list of the cities I have lived in.-->
+<h2>Hobbies</h2>
+<ul class="lists-alter">
+
+    <li>Baking</li>
+    <li>Reading</li>
+    <li>Travelling</li>
+
+</ul>
+<p id ="sparagraph"> Note: My hobbies do vary depending on the season, but these are the activities that I currently enjoy. </p>
+
+/* Above is a paragraph that I created to apply a different CSS style from the other paragraphs. This paragraph consists
+special styling to generate what looks a like a note section. */
+
+<p>The link to my <a href = "/hello/"> Hello page</a>.</p>
+<p>A link to <a href = "https://www.bethelcampusfellowship.com/"> Bethel Campus Fellowship</a>. A campus ministry that I attend on campus.</p>
+<p>A link to <a href = "https://terplink.umd.edu/" target="_blank"> TerpLink </a> Forcing a new browser tab to open. Used to view events taking place on campus.</p>
+
+
+<img class= "img.logo" src= "https://terpconnect.umd.edu/~jbono/bmgt407/images/smith-logo.png" alt="Smith Logo">
+<p> Here is an image of the Smith logo</p>
+
+<!-- This is a collection of links to either my website or websites that I visit.-->
+
+</body>
+</html>
