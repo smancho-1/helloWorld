@@ -49,7 +49,7 @@
         <div class="col-md-6">
             <p>{{ 'Yes' if request.form.get('agree_check') else 'No' }}</p>
         </div>
-           <p><a> href="{{ url_for('contact') }}>Complete form again</a></p>
+           <p><a href="{{ url_for('contact') }}">Complete form again</a></p>
     {% else %}
 
      <form class= "row g-3" action="{{ url_for('contact') }}" method="post">

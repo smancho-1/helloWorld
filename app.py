@@ -20,7 +20,7 @@ def favorite_course():
     print(f'Subject: {request.form.get("subject")}')
     print(f'Course_number: {request.form.get("course_number")}')
     return render_template('favorite-course.html')
-@app.route('/contact')
+@app.route('/contact', methods=['GET','POST'])
 def contact():
     if request.method == 'POST':
         return render_template('contact.html', form_submitted=True)
