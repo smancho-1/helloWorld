@@ -106,7 +106,7 @@
       <label class="form-check-label" for="is_honors">
           <strong>Is this an honors student?</strong>
             {% if action and not(action in ['create', 'update']) %}
-            <br>{{ 'Yes' if student and student['is_honors'] == True else 'No' }}
+                <br{{ 'Yes' if student and student['is_honors'] == True else 'No' }}>
             {% endif %}
       </label>
     </div>

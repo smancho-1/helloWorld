@@ -21,6 +21,15 @@ def student_view_all():
     return render_template('student_view_all.html', students=students)
 
 
+@app.route('/student/delete')
+def student_delete_all():
+    students = Student.query.outerjoin(Major, Student.major_id == Major.major_id) \
+        .add_entity(Major) \
+        .order_by(Student.last_name, Student.first_name) \
+        .all()
+    return render_template('student_delete.html', students=students)
+
+
 @app.route('/student/view/<int:student_id>')
 def student_view(student_id):
     student = Student.query.filter_by(student_id=student_id).first()
@@ -111,7 +120,7 @@ def student_delete(student_id):
     else:
         flash(f'Delete failed! Student could not be found.', 'error')
 
-    return redirect(url_for('student_view_all'))
+    return redirect(url_for('student_delete_all'))
 
 
 @app.route('/')
