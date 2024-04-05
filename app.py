@@ -29,7 +29,7 @@ def student_view(student_id):
         .all()
 
     if student:
-        return render_template('student_entry.html', student=student, majors=majors, action='read')
+        return render_template('student_entry2.html', student=student, majors=majors, action='read')
 
     else:
         flash(f'Student attempting to be viewed could not be found!', 'error')
@@ -42,7 +42,7 @@ def student_create():
         majors = Major.query.order_by(Major.major) \
             .order_by(Major.major) \
             .all()
-        return render_template('student_entry.html', majors=majors, action='create')
+        return render_template('student_entry2.html', majors=majors, action='create')
     elif request.method == 'POST':
         first_name = request.form['first_name']
         last_name = request.form['last_name']
@@ -72,7 +72,7 @@ def student_edit(student_id):
             .all()
 
         if student:
-            return render_template('student_entry.html', student=student, majors=majors, action='update')
+            return render_template('student_entry2.html', student=student, majors=majors, action='update')
 
         else:
             flash(f'Student attempting to be edited could not be found!', 'error')
