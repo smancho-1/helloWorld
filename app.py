@@ -20,7 +20,7 @@ def student_view_all():
         .all()
     return render_template('student_view_all.html', students=students)
 
-
+#Created a delete route by duplicating the student view route
 @app.route('/student/delete')
 def student_delete_all():
     students = Student.query.outerjoin(Major, Student.major_id == Major.major_id) \
@@ -55,6 +55,7 @@ def student_create():
     elif request.method == 'POST':
         first_name = request.form['first_name']
         last_name = request.form['last_name']
+        # Add request statement to retrieve email
         email = request.form['email']
         major_id = request.form['major_id']
 
@@ -92,6 +93,7 @@ def student_edit(student_id):
         if student:
             student.first_name = request.form['first_name']
             student.last_name = request.form['last_name']
+            #Add request statement to retrieve email
             student.email = request.form['email']
             student.major_id = request.form['major_id']
             student.birthdate = dt.strptime(request.form['birth_date'], '%Y-%m-%d')
@@ -119,7 +121,7 @@ def student_delete(student_id):
         flash(f'{student} was successfully deleted!', 'success')
     else:
         flash(f'Delete failed! Student could not be found.', 'error')
-
+#Redirect to delete page, which is a duplicate of the view page
     return redirect(url_for('student_delete_all'))
 
 
