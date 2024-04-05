@@ -28,7 +28,7 @@
   <div class="col-md-4">
     <label for="first_name" class="form-label"><strong>First Name</strong></label>
     {% if action and action in ['create', 'update'] %}
-    <input type="text" class="form-control" id="first_name" name="first_name" value="{{ student['first_name'] if student else '' }}" required>
+        <input type="text" class="form-control" id="first_name" name="first_name" value="{{ student['first_name'] if student else '' }}" required>
     {% else %}
         <br>{{ student['first_name'] }}
     {% endif %}
@@ -109,8 +109,7 @@
             <br>{{ 'Yes' if student and student['is_honors'] == True else 'No' }}
             {% endif %}
       </label>
-  </div>
-
+    </div>
 
   </div>
   <div class="col-12 text-center">
