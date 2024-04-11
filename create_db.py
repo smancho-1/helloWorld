@@ -7,7 +7,7 @@ with app.app_context():
     db.create_all()
 
     # Initial loading of majors
-    majors = ['Accounting', 'Finance', 'Information Systems', 'International Business', 'Management',
+    majors = ['Accounting', 'Finance', 'Information Systems', 'International Business', 'Management', \
               'Operations Management & Business Analytics', 'Supply Chain Management']
     for each_major in majors:
         print(f'{each_major} inserted into major')
@@ -17,12 +17,12 @@ with app.app_context():
 
     # Initial loading of users
     users = [
-        {'username': 'srhman', 'email': 'srhman@terpmail.umd.edu', 'first_name': 'Sarah', 'last_name': 'Mancho',
-            'password': generate_password_hash('srhman', method='pbkdf2:sha256'), 'role': 'STUDENT'},
+        {'username': 'srhman', 'email': 'srhman@terpmail.umd.edu', 'first_name':'Sarah', 'last_name':'Mancho',
+            'password': generate_password_hash('srhman', method='pbkdf2:sha256'), 'role':'STUDENT'},
         {'username': 'manager', 'email': 'manager@umd.edu', 'first_name':'Joe', 'last_name':'King',
-            'password': generate_password_hash('managerpw', method='pbkdf2:sha256'), 'role': 'MANAGER'},
+            'password': generate_password_hash('managerpw', method='pbkdf2:sha256'), 'role':'MANAGER'},
         {'username': 'admin', 'email': 'admin@umd.edu', 'first_name':'Crystal', 'last_name':'Ball',
-            'password': generate_password_hash('adminpw', method='pbkdf2:sha256'), 'role': 'ADMIN'}
+            'password': generate_password_hash('adminpw', method='pbkdf2:sha256'), 'role':'ADMIN'}
     ]
 
     for each_user in users:
